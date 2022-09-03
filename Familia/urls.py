@@ -3,6 +3,6 @@ from Familia.views import listar_familia,familiar
 
 urlpatterns = [
     path('', listar_familia, name="familia"),
-    path('<int:id>/',familiar,name="familiar"),
+    path('<int:id>/',familiar,name="familiares"),
     
 ]
