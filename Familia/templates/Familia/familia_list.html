@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Document</title>
-</head>
-<body>
-    Lista Familiares:
-    {% for persona in familia %}
-    <p>{{persona.nombre}}</p>
-    {%endfor%}
-    
+{% extends "Familia/plantilla_base.html" %}
+{% block contenido_base %}
+Lista Familiares:
 
-</body>
-</html>
+{% for persona in familia %}
+<a class="navbar-brand" href="{%url 'familiar' persona.id %}">{{persona.nombre}}</a>
+
+{%endfor%}
+{% endblock contenido_base %}

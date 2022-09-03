@@ -1,6 +1,8 @@
 from django.urls import path
-from Familia.views import listar_familia
+from Familia.views import listar_familia,familiar
 
 urlpatterns = [
-    path('', listar_familia),
+    path('', listar_familia, name="familia"),
+    path('<int:id>/',familiar,name="familiar"),
+    
 ]

@@ -14,3 +14,12 @@ def listar_familia(request):
 
 def inicio(request):
     return render(request,"Familia/inicio.html" )
+
+
+def familiar(request, id):
+    queryset=Familiar.objects.get(id=id)
+    diccionario={'miembro':queryset}
+    plantilla=loader.get_template('Familia/familiar.html')
+    documento_html=plantilla.render(diccionario)
+
+    return HttpResponse(documento_html)
