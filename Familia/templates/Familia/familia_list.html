@@ -4,6 +4,7 @@ Lista Familiares:
 
 {% for persona in familia %}
 <a class="navbar-brand" href="{%url 'familiares' persona.id %}">{{persona.nombre}}</a>
-
 {%endfor%}
+<h1>Familia</h1>
+<a href="{% url 'familia_formulario' %}">Crear familia</a>
 {% endblock contenido_base %}
